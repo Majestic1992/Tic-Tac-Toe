@@ -49,11 +49,20 @@
     }
 }
 
+@media (max-height: 27em) and (orientation: landscape) {
+    .Container {
+        width: 25rem;
+    }
+
+    .Button {
+        margin: 2rem auto 0 auto;
+    }
+}
+
 @media (max-width: 27em) {
     .Container {
         width: 29rem;
     }
-
 }
 
 

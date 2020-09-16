@@ -25,6 +25,14 @@
     }
 }
 
+@media (max-height: 27em) and (orientation: landscape) {
+    .Cells {
+        height: 6rem;
+        width: 8rem;
+        font-size: 5.5rem;
+    }
+}
+
 @media (max-width: 27em) {
     .Cells {
         height: 8rem;

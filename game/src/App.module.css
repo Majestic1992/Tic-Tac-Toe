@@ -17,6 +17,13 @@
     }
 }
 
+@media (max-height: 27em) and (orientation: landscape) {
+    .Name {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+}
+
 @media (max-width: 27em) {
     .Name {
         font-size: 4rem;
