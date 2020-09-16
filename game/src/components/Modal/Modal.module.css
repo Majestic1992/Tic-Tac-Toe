@@ -1,0 +1,99 @@
+.Align {
+    position: absolute;
+    top: 44%;
+    left: 25%;
+}
+
+.Modal {
+    position: fixed;
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 500;
+    background-color: white;
+    width: 50%;
+    border:  1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 2rem;
+    transition: all .3s ease-out;
+}
+
+.Button {
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    border: none;
+    background-color: navy;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 0 1rem black;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.Button:hover,
+.Button:active {
+    background-color: blue;
+    transform: scale(1.02);
+    box-shadow: 0 0 1rem blue;
+}
+
+@media (max-width: 60em) {
+    .Align {
+        top: 44%;
+        left: 15%;
+    }
+    .Modal {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 42em) {
+    .Align {
+        top: 44%;
+        left: 10%;
+    }
+    .Modal {
+        width: 80%;
+        margin: auto;
+        font-size: 2rem;
+    }
+
+    .Button {
+        padding: 1rem 1.5rem;
+        font-size: 1.5rem;
+ 
+    }
+}
+
+@media (max-width: 33em) {
+    .Align {
+        top: 44%;
+        left: 5%;
+    }
+    .Modal {
+        width: 90%;
+        justify-content: space-between;
+
+    }
+
+}
+
+@media (max-width: 26em) {
+    .Align {
+        top: 44%;
+        left: 5%;
+    }
+    .Modal {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .Button {
+        padding: .9rem 1.1rem;
+        font-size: 1rem;
+
+    }
+
+}

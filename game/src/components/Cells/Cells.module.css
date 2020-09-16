@@ -1,0 +1,35 @@
+.Cells {
+    background: #fff;
+    font-size: 9rem;
+    font-weight: 500;
+    text-align: center;
+    height: 10rem;
+    width: 12rem;
+    cursor: pointer;
+}
+
+
+@media (min-width: 80em) {
+     .Cells {
+        height: 15rem;
+        width: 18rem;
+        font-size: 13rem;
+    }
+} 
+
+
+@media (max-width: 42em) {
+    .Cells {
+        height: 10rem;
+        width: 12.37rem;
+    }
+}
+
+@media (max-width: 27em) {
+    .Cells {
+        height: 8rem;
+        width: 9.3rem;
+        font-size: 7rem;
+    }
+}
+

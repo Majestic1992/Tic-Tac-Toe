@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    height: 100vh;
+    max-width: 90vw;
+    margin: 0 auto;
+    text-rendering: optimizeLegibility;
+    color: black;
+    background-color: rgb(228, 228, 228);
+}
+
+.clearfix {zoom: 1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
