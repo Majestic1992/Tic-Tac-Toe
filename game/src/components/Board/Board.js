@@ -47,39 +47,39 @@ class Board extends Component {
           }
             
 
-        checkWinner = () => {    
-        let a = this.state.grid;
-        if (a[0].value === 'X' && a[1].value === 'X' && a[2].value === 'X' 
-            || a[3].value === 'X' && a[4].value === 'X' && a[5].value === 'X' 
-            || a[6].value === 'X' && a[7].value === 'X' && a[8].value === 'X'
-            || a[0].value === 'X' && a[3].value === 'X' && a[6].value === 'X'
-            || a[1].value === 'X' && a[4].value === 'X' && a[7].value === 'X' 
-            || a[2].value === 'X' && a[5].value === 'X' && a[8].value === 'X'
-            || a[0].value === 'X' && a[4].value === 'X' && a[8].value === 'X' 
-            || a[2].value === 'X' && a[4].value === 'X' && a[6].value === 'X'
+        checkWinner = () => {  
+        const { grid } = this.state;  
+        if (grid[0].value === 'X' && grid[1].value === 'X' && grid[2].value === 'X' 
+            || grid[3].value === 'X' && grid[4].value === 'X' && grid[5].value === 'X' 
+            || grid[6].value === 'X' && grid[7].value === 'X' && grid[8].value === 'X'
+            || grid[0].value === 'X' && grid[3].value === 'X' && grid[6].value === 'X'
+            || grid[1].value === 'X' && grid[4].value === 'X' && grid[7].value === 'X' 
+            || grid[2].value === 'X' && grid[5].value === 'X' && grid[8].value === 'X'
+            || grid[0].value === 'X' && grid[4].value === 'X' && grid[8].value === 'X' 
+            || grid[2].value === 'X' && grid[4].value === 'X' && grid[6].value === 'X'
             ) {
             this.setState({gamePlaying: false});
             this.setState ({showModal: true});
             this.setState({status: 'Congrats! X has won!'})
 
 
-        }  if (a[0].value === 0 && a[1].value === 0 && a[2].value === 0 
-            || a[3].value === 0 && a[4].value === 0 && a[5].value === 0 
-            || a[6].value === 0 && a[7].value === 0 && a[8].value === 0
-            || a[0].value === 0 && a[3].value === 0 && a[6].value === 0
-            || a[1].value === 0 && a[4].value === 0 && a[7].value === 0 
-            || a[2].value === 0 && a[5].value === 0 && a[8].value === 0
-            || a[0].value === 0 && a[4].value === 0 && a[8].value === 0 
-            || a[2].value === 0 && a[4].value === 0 && a[6].value === 0) {
+        }  if (grid[0].value === 0 && grid[1].value === 0 && grid[2].value === 0 
+            || grid[3].value === 0 && grid[4].value === 0 && grid[5].value === 0 
+            || grid[6].value === 0 && grid[7].value === 0 && grid[8].value === 0
+            || grid[0].value === 0 && grid[3].value === 0 && grid[6].value === 0
+            || grid[1].value === 0 && grid[4].value === 0 && grid[7].value === 0 
+            || grid[2].value === 0 && grid[5].value === 0 && grid[8].value === 0
+            || grid[0].value === 0 && grid[4].value === 0 && grid[8].value === 0 
+            || grid[2].value === 0 && grid[4].value === 0 && grid[6].value === 0) {
             this.setState({gamePlaying: false});
             this.setState ({showModal: true});
             this.setState({status: 'Congrats! 0 has won!'})
         } 
 
         if (
-            a[0].value !== '' && a[1].value !== '' && a[2].value !== '' 
-            && a[3].value !== '' && a[4].value !== '' && a[5].value !== '' 
-            && a[6].value !== '' && a[7].value !== '' && a[8].value !== '') {
+            grid[0].value !== '' && grid[1].value !== '' && grid[2].value !== '' 
+            && grid[3].value !== '' && grid[4].value !== '' && grid[5].value !== '' 
+            && grid[6].value !== '' && grid[7].value !== '' && grid[8].value !== '') {
             this.setState({gamePlaying: false}) 
             this.setState ({showModal: true});
             this.setState({status: `It's a draw!`})
