@@ -49,6 +49,16 @@ class Board extends Component {
 
         checkWinner = () => {  
         const { grid } = this.state;  
+
+        if (
+            grid[0].value !== '' && grid[1].value !== '' && grid[2].value !== '' 
+            && grid[3].value !== '' && grid[4].value !== '' && grid[5].value !== '' 
+            && grid[6].value !== '' && grid[7].value !== '' && grid[8].value !== '') {
+            this.setState({gamePlaying: false}) 
+            this.setState ({showModal: true});
+            this.setState({status: `It's a draw!`})
+        }
+        
         if (grid[0].value === 'X' && grid[1].value === 'X' && grid[2].value === 'X' 
             || grid[3].value === 'X' && grid[4].value === 'X' && grid[5].value === 'X' 
             || grid[6].value === 'X' && grid[7].value === 'X' && grid[8].value === 'X'
@@ -76,14 +86,7 @@ class Board extends Component {
             this.setState({status: 'Congrats! 0 has won!'})
         } 
 
-        if (
-            grid[0].value !== '' && grid[1].value !== '' && grid[2].value !== '' 
-            && grid[3].value !== '' && grid[4].value !== '' && grid[5].value !== '' 
-            && grid[6].value !== '' && grid[7].value !== '' && grid[8].value !== '') {
-            this.setState({gamePlaying: false}) 
-            this.setState ({showModal: true});
-            this.setState({status: `It's a draw!`})
-        }
+
                
     } 
 
